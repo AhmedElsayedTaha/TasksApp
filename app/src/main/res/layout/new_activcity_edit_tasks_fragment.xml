@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/scroll">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lin3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/taskcategory"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="الفئة"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/catLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lin3">
+
+                <TextView
+                    android:id="@+id/taskNameList"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="المهمة"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/desclin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/catLin">
+
+                <TextView
+                    android:id="@+id/taskDescriptionTv"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/task_description"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/reqlin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desclin">
+
+                <TextView
+                    android:id="@+id/taskRequest"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/task_order"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prilin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reqlin">
+
+                <TextView
+                    android:id="@+id/taskPriority"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/task_priority"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/startlin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prilin">
+
+                <TextView
+                    android:id="@+id/task_start_time"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="بداية المهمة"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/endlin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startlin">
+
+                <TextView
+                    android:id="@+id/task_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="نهاية المهمة"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="@string/start_date"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endlin" />
+
+            <TextView
+                android:id="@+id/dayStart"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/start"
+                app:layout_constraintTop_toBottomOf="@+id/endlin"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/monthStart"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/dayStart"
+                app:layout_constraintTop_toBottomOf="@+id/endlin"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/YearStart"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/monthStart"
+                app:layout_constraintTop_toBottomOf="@+id/endlin"
+                app:layout_constraintWidth_percent="0.2" />
+
+
+            <TextView
+                android:id="@+id/end"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="@string/end_date"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start" />
+
+            <TextView
+                android:id="@+id/dayEnd"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/end"
+                app:layout_constraintTop_toBottomOf="@+id/dayStart"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/monthEnd"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/dayEnd"
+                app:layout_constraintTop_toBottomOf="@+id/monthStart"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <TextView
+                android:id="@+id/YearEnd"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                android:textColor="#B99930"
+                app:layout_constraintEnd_toStartOf="@+id/monthEnd"
+                app:layout_constraintTop_toBottomOf="@+id/monthStart"
+                app:layout_constraintWidth_percent="0.2" />
+
+           <!-- <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/followTaskCheckBox"
+                android:backgroundTint="@android:color/black"
+                />-->
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toLeftOf="@+id/followTaskCheckBox"
+                app:layout_constraintTop_toTopOf="@+id/followTaskCheckBox"
+                android:text="@string/check1"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"
+                android:id="@+id/follow"
+                />-->
+
+           <!-- <TextView
+                android:id="@+id/taskChoices"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="المهمة الرئيسية"
+                android:gravity="center"
+                android:visibility="visible"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/followTaskCheckBox" />
+
+            <TextView
+                android:id="@+id/taskChoicesName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:textColor="#B99930"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                app:layout_constraintEnd_toStartOf="@+id/taskChoices"
+                app:layout_constraintRight_toLeftOf="parent"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/followTaskCheckBox"
+                app:layout_constraintWidth_percent="0.67" />-->
+
+            <TextView
+                android:id="@+id/textViewGuideGame"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/guideName"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end" />
+
+            <TextView
+                android:id="@+id/guideName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:textColor="#B99930"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                app:layout_constraintEnd_toStartOf="@+id/textViewGuideGame"
+                app:layout_constraintRight_toLeftOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/end"
+                app:layout_constraintWidth_percent="0.67" />
+
+
+
+            <TextView
+                android:id="@+id/textViewGuidePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/guidePhone"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGuideGame" />
+
+            <TextView
+                android:id="@+id/guidePhoneTv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tasks_heads_background"
+                android:gravity="center"
+                android:textColor="#B99930"
+                android:padding="2dp"
+                android:textAlignment="gravity"
+                app:layout_constraintEnd_toStartOf="@+id/textViewGuidePhone"
+                app:layout_constraintRight_toLeftOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGuideGame"
+                app:layout_constraintWidth_percent="0.67" />
+
+
+
+            <LinearLayout
+                android:id="@+id/homeNoLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGuidePhone">
+
+                <TextView
+                    android:id="@+id/houseIDs"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/houseNo"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/visitNoLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeNoLin">
+
+                <TextView
+                    android:id="@+id/pilgrimsNo"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/pilgrimsNo"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/respPersonLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitNoLin">
+
+                <TextView
+                    android:id="@+id/userResponsible"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/responsible_person"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/arrTimeLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respPersonLin">
+
+                <TextView
+                    android:id="@+id/arrivalTime"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/arrivedTime"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/noteLin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/arrTimeLin"
+               >
+
+                <TextView
+                    android:id="@+id/notes"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/tasks_heads_background"
+                    android:gravity="center"
+                    android:textColor="#B99930" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/notes"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
