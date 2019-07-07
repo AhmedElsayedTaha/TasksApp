@@ -35,6 +35,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements View.On
         if(id==R.id.btn_next){
             userNameLin.setVisibility(View.GONE);
             changePassLin.setVisibility(View.VISIBLE);
+
         }
 
     }

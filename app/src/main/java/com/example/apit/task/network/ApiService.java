@@ -1,10 +1,13 @@
 package com.example.apit.task.network;
 
+import com.example.apit.task.model.User;
+
 import java.util.Date;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -112,4 +115,7 @@ public interface ApiService {
 
     @GET("Questionnaires")
     Single<String> pdfName(@Query("task_id") int taskID, @Query("action_id") int actionID);
+
+    @GET("Login")
+    Single<User> getUserData(@Query("name") String nickName);
 }
